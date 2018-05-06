@@ -9,7 +9,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/lib/rules/import-break.spec.js"
+    "test": "node test/lib/rules/method-break.spec.js"
   },
   "author": "",
   "license": "ISC",
