@@ -1,4 +1,4 @@
-const rule = require('../../../lib/rules/import-break');
+const rule = require('../../../src/lib/rules/import-length');
 const RuleTester = require('eslint').RuleTester;
 const tester = new RuleTester({ parserOptions: { ecmaVersion: 2015, sourceType: 'module' } });
 

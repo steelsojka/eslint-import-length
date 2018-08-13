@@ -1,20 +1,23 @@
 {
-  "name": "eslint-specifier-break",
+  "name": "eslint-import-length",
   "version": "1.0.0",
-  "description": "Checks the character length of specifiers",
-  "main": "index.js",
-  "repository": "https://github.com/steelsojka/eslint-specifier-break",
+  "description": "ESLint rule for checking import character lengths",
+  "main": "lib/index.js",
+  "repository": "https://github.com/steelsojka/eslint-import-length",
   "directories": {
     "doc": "docs",
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "build": "babel src --out-dir ./ "
   },
   "author": "Steven Sojka",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1"
   }
 }
