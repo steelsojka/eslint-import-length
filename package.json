@@ -10,7 +10,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test",
+    "test": "babel-node test",
     "build": "babel src --out-dir ./ "
   },
   "author": "Steven Sojka",

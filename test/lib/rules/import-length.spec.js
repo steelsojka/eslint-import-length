@@ -2,7 +2,7 @@ const rule = require('../../../src/lib/rules/import-length');
 const RuleTester = require('eslint').RuleTester;
 const tester = new RuleTester({ parserOptions: { ecmaVersion: 2015, sourceType: 'module' } });
 
-tester.run('import-break', rule, {
+tester.run('import-length', rule, {
   valid: [ {
     code: `import { Test, Test2 } from 'my-test-package';`,
     options: [ { charLimit: 60 } ]
