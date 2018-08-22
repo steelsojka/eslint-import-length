@@ -15,6 +15,13 @@ tester.run('import-length', rule, {
   }, {
     code: `import Blorg, { Blorgy } from 'my-test-package';`,
     options: [ { charLimit: 80 } ]
+  }, {
+    code: [
+      `import {`,
+      '  Blorgy',
+      `} from 'my-test-package-rstrstonrstenfpuftenrsternstufpienrstufestufe';`
+    ].join('\n'),
+    options: [ { charLimit: 80 } ]
   } ],
   invalid: [ {
     code: `import { Test, Test2 } from 'my-test-package';`,
@@ -44,6 +51,22 @@ tester.run('import-length', rule, {
       'import {',
       '    Test',
       '} from \'my-test-package-with-some-really-long-package-name\';'
+    ].join('\n')
+  }, {
+    code: [
+      'import {',
+      '  Test, Blorg,',
+      '  Test2',
+      `} from 'my-test-package-name';`,
+    ].join('\n'),
+    options: [ { charLimit: 70, oneNamedImportPerLine: true } ],
+    errors: 1,
+    output: [
+      'import {',
+      '  Test,',
+      '  Blorg,',
+      '  Test2',
+      '} from \'my-test-package-name\';'
     ].join('\n')
   } ]
 });
