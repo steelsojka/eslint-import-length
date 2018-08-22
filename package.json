@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-import-length",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ESLint rule for checking import character lengths",
   "main": "lib/index.js",
   "repository": "https://github.com/steelsojka/eslint-import-length",
