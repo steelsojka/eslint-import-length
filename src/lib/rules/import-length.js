@@ -15,9 +15,6 @@ export const meta = {
   } ]
 };
 
-const IMPORT_KEYWORD_LENGTH = 'import '.length;
-const FROM_KEYWORD_LENGTH = ' from '.length;
-
 export function create(context) {
   const sourceCode = context.getSourceCode();
   const { charLimit = 80, indentChar = '  ', oneNamedImportPerLine = true } = context.options[0] || {};
