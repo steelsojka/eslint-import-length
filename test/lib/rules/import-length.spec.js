@@ -7,6 +7,12 @@ tester.run('import-length', rule, {
     code: `import { Test, Test2 } from 'my-test-package';`,
     options: [ { charLimit: 60 } ]
   }, {
+    code: [
+      `import { Test, Test2 } from 'my-test-package';`,
+      `import { Test3, Test4 } from 'my-test-package2';`
+    ].join('\n'),
+    options: [ { charLimit: 60 } ]
+  }, {
     code: `import ThisIsAReallyLongDefaultExportThatCanNotBeWrapped from 'my-test-package';`,
     options: [ { charLimit: 60 } ]
   }, {

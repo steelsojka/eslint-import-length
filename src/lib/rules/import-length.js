@@ -21,9 +21,7 @@ export function create(context) {
 
   return {
     ImportDeclaration(node) {
-      const importText = sourceCode.getText(node);
       const specifiers = node.specifiers;
-      const pathLength = node.source.raw.length;
       const pathLine = node.loc.start.line;
       const defaultSpecifier = specifiers.find(spec => spec.type === 'ImportDefaultSpecifier');
       const namedSpecifiers = specifiers.filter(spec => spec.type === 'ImportSpecifier');
@@ -89,7 +87,7 @@ export function create(context) {
         }
 
         if (Number(line) === node.loc.start.line) {
-          length += specifiers[0].range[0];
+          length += specifiers[0].range[0] - node.range[0];
         }
 
         if (length > charLimit) {
